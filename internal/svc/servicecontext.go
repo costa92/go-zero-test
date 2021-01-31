@@ -29,6 +29,8 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	//自动同步更新表结构,不要建表了O(∩_∩)O哈哈~
 	db.AutoMigrate(&models.User{})
 
-
-	return &ServiceContext{Config: c, DbEngin: db}
+	return &ServiceContext{
+		Config: c,
+		DbEngin: db,
+	}
 }

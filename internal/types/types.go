@@ -10,6 +10,7 @@ type UserOptReq struct {
 type UserOptResp struct {
 	Id    uint   `json:"id"`
 	Token string `json:"token"`
+	JwtToken
 }
 
 type VerifyReq struct {
@@ -18,4 +19,10 @@ type VerifyReq struct {
 
 type VerifyResp struct {
 	Data string `json:"data"`
+}
+
+type JwtToken struct {
+	AccessToken string `json:"accessToken,omitempty"`
+	AccessExpire int64 `json:"accessExpire,omitempty"`
+	RefreshAfter int64 `json:"refreshAfter,omitempty"`
 }

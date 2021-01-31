@@ -19,6 +19,9 @@ type (
 	}
 )
 
+
+
+
 service open-api {
 	@doc(
 		summary: 公开的api函数
